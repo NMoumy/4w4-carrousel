@@ -4,9 +4,21 @@
   position: fixed;
   left: 25%;
   top: 25%;
+  background-color: orange;
+  border: 3px solid rgb(255, 98, 0);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transform: scale(0);
   transition: transform .5s;
+
+  @media screen and (min-width: 1000px) {
+    // width: 90vw;
+    // height: 90vh;
+    // left: 0;
+    // top: 0;
+  }
+
 }
-.carrousel--ouvrir {
+.carrousel--ouvrir { // "--" car c'est une classe qu'on va ajouter après
   transform: scale(1);
 }

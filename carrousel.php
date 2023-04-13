@@ -48,10 +48,3 @@ function genere_boite()
   ';
 }
 add_shortcode('carrousel', 'genere_boite');
-//      ____
-//    _)___(_
-//    (*_*)P
-//    /| |/
-//   d/ /d
-//   | |
-//  d d
