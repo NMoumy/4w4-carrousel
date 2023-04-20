@@ -1,7 +1,7 @@
 .carrousel {
   width: 50%;
   height: 50%;
-  position: fixed;
+  position: absolute;
   left: 25%;
   top: 25%;
   background-color: orange;
@@ -11,18 +11,23 @@
   transition: transform 0.5s;
 }
 .carrousel__figure {
-  overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
-.carrousel__figure img {
+.carrousel__img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   top: 0;
   left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.carrousel__img--activer {
+  opacity: 1;
 }
 
 .carrousel__x {
@@ -34,4 +39,16 @@
 
 .carrousel--ouvrir {
   transform: scale(1);
+}
+
+.carrousel__form {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.carrousel__rad {
+  display: inline-block;
+  margin: 5px;
 }/*# sourceMappingURL=style.css.map */

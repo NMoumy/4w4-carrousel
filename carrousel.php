@@ -20,7 +20,7 @@ function enfiler_script_css()
                       plugin_dir_url(__FILE__) . 'js/carrousel.js',
                       array(),
                       $version_js,
-                      true
+                      true // ajoute le scri^t carrousel.js a la fin de la page
   );
 }
 add_action('wp_enqueue_scripts', 'enfiler_script_css');
