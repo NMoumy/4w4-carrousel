@@ -24,10 +24,31 @@
   /******************** Ouvrir la boîte modale ********************/
   ajouter_img_ouverture_carrousel();
 
-  /******************** Fermer la boîte modale ********************/
+  /******************** Les boutons ********************/
+  //Fermer la boîte modale
   btncarrousel__x.addEventListener('mousedown', () => {
     console.log('fermer la boîte modale');
     carrousel.classList.remove('carrousel--ouvrir');
+  })
+
+  //Gerer le bouton de flèche droite
+  btn__droite.addEventListener('mousedown', function(){
+    index++;
+    if(index== galerie__img.length){
+      index=0;
+    }
+    console.log("où est index btn droite : " + index);
+    afficher_image(index);
+  })
+
+  //Gerer le bouton de flèche gauche
+  btn__gauche.addEventListener('mousedown', function(){
+    index--;
+    if(index==-1){
+      index= galerie__img.length-1;
+    }
+    console.log("où est index btn gauche : " + index);
+    afficher_image(index);
   })
 
   /******************** Fontions ********************/
@@ -78,38 +99,12 @@
     rad.dataset.index = position;
     position += 1;
     carrousel__form.appendChild(rad);
-
     rad.addEventListener('mousedown', function(){
       console.log("index btn toucher : "+this.dataset.index);
       index = parseInt(this.dataset.index);
       afficher_image(index);
     })
   }
-
-  /**
-   * gestion_fleches
-   * La gestions des fleches
-   */
-
-    
-    btn__droite.addEventListener('mousedown', function(){
-     
-      index++;
-      console.log("index btn droite : "+ index);
-      if(index== galerie__img.length){
-        index=0;
-      }
-      afficher_image(index);
-    })
-
-    btn__gauche.addEventListener('mousedown', function(){
-      index--;
-      if(index==-1){
-        index= galerie__img.length-1;
-      }
-      console.log("index btn gauche : "+ index);
-      afficher_image(index);
-    })
 
   /**
    * afficher_image
@@ -121,6 +116,7 @@
       carrousel__figure.children[ancien_index].classList.remove('carrousel__img--activer');
       carrousel__form.children[ancien_index].checked;
     }
+    console.log(ancien_index);
     // carrousel__figure.children[this.dataset.index].style.opacity = 1;
     carrousel__figure.children[index].classList.add('carrousel__img--activer');
     ancien_index = index;
