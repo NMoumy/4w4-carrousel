@@ -19,11 +19,14 @@
   let position = 0
 
   /******************** Ouvrir la boîte modale ********************/
-  btncarrousel__ouvrir.addEventListener('mousedown', () => {
-    carrousel.classList.add('carrousel--ouvrir');
-    console.log('ouvrir la boîte modale');
-    ajouter_img_dans_carrousel()
-  })
+  for (const une__img of galerie__img) {
+    une__img.addEventListener('mousedown', () => {
+      carrousel.classList.add('carrousel--ouvrir');
+      console.log('ouvrir la boîte modale');
+      ajouter_img_dans_carrousel()
+    })
+  }
+
 
   /******************** Fermer la boîte modale ********************/
   btncarrousel__x.addEventListener('mousedown', () => {
