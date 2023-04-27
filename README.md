@@ -6,10 +6,9 @@
 - Github **NMoumy**
   - https://github.com/NMoumy
 
-# Lab4 
-## description du lab4:
-- Ajouter quelques champs personnalisés pour la page d'accueil
-- Utilisez des types de champs qu'on a pas encore utilisé
-- Débuter le carrousel
- - Afficher le conteneur du carrousel avec une animation
- - Afficher les images de la galerie dans le carrousel
+# Exercice 2
+## description de l'exercice 2:
+- Ajouter
+- **Les boutons «suivant» et «précédant»** La navigation avec les boutons flèches permet de parcourir en boucle  l'ensemble des images du carrousel.
+- **L'état des radio-boutons** s'adaptent au changement d'images.
+- La **réouverture de la boîte modale** ne recopie pas les images dans le carrousel.
