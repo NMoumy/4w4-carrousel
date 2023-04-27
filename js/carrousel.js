@@ -2,7 +2,6 @@
   console.log('Début du carrousel');
 
   /******************** Variable du carrousel ********************/
-  let btncarrousel__ouvrir = document.querySelector('.carrousel__ouvrir');
   let btncarrousel__x = document.querySelector('.carrousel__x');
   let carrousel = document.querySelector('.carrousel');
   let carrousel__figure = document.querySelector('.carrousel__figure');
@@ -19,14 +18,7 @@
   let position = 0
 
   /******************** Ouvrir la boîte modale ********************/
-  for (const une__img of galerie__img) {
-    une__img.addEventListener('mousedown', () => {
-      carrousel.classList.add('carrousel--ouvrir');
-      console.log('ouvrir la boîte modale');
-      ajouter_img_dans_carrousel()
-    })
-  }
-
+  ajouter_img_ouverture_carrousel();
 
   /******************** Fermer la boîte modale ********************/
   btncarrousel__x.addEventListener('mousedown', () => {
@@ -37,24 +29,25 @@
   /******************** Fontions ********************/
 
   /**
-   * ajouter_img_dans_carrousel
+   * ajouter_img_ouverture_carrousel
    * Ajouter l'ensemble des images de la galerie dans la boite modale carrousel
    */
-  function ajouter_img_dans_carrousel() {
+  function ajouter_img_ouverture_carrousel(){
     for (const elm of galerie__img)
     {
-      elm.dataset.index = position
+      elm.dataset.index = position;
       elm.addEventListener('mousedown',function(){
-        index = this.dataset.index
-        afficher_image(index)
-        console.log(index)
+        carrousel.classList.add('carrousel--ouvrir');
+        index = this.dataset.index;
+        afficher_image(index);
+        console.log(index);
       })
   
-      creation_img_carrousel(elm)
-      creation_radio_carrousel()
+      creation_img_carrousel(elm);
+      creation_radio_carrousel();
     }
   }
-
+  
   /**
    * creation_img_carrousel
    * Creer l'ensemble des images de la galerie dans la boite modale carrousel
@@ -82,7 +75,7 @@
     carrousel__form.appendChild(rad);
 
     rad.addEventListener('mousedown', function(){
-      console.log(this.dataset.index);
+      console.log("index btn toucher : "+this.dataset.index);
       index = this.dataset.index;
       afficher_image(index);
     })
@@ -96,7 +89,7 @@
     if(ancien_index != -1) {
       // carrousel__figure.children[this.dataset.index].style.opacity = 0;
       carrousel__figure.children[ancien_index].classList.remove('carrousel__img--activer');
-      //carrousel__form.children[ancien_index].checked 
+      // carrousel__form.children[ancien_index].checked;
     }
     // carrousel__figure.children[this.dataset.index].style.opacity = 1;
     carrousel__figure.children[index].classList.add('carrousel__img--activer');
