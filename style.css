@@ -51,4 +51,20 @@
 .carrousel__rad {
   display: inline-block;
   margin: 5px;
+}
+
+.carrousel__droite {
+  position: absolute;
+  background-color: aqua;
+  right: 0;
+  top: 50%;
+  z-index: 3;
+}
+
+.carrousel__gauche {
+  position: absolute;
+  z-index: 3;
+  background-color: aqua;
+  left: 0;
+  top: 50%;
 }/*# sourceMappingURL=style.css.map */

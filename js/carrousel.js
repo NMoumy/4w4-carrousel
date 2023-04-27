@@ -89,7 +89,7 @@
     if(ancien_index != -1) {
       // carrousel__figure.children[this.dataset.index].style.opacity = 0;
       carrousel__figure.children[ancien_index].classList.remove('carrousel__img--activer');
-      // carrousel__form.children[ancien_index].checked;
+      carrousel__form.children[ancien_index].checked;
     }
     // carrousel__figure.children[this.dataset.index].style.opacity = 1;
     carrousel__figure.children[index].classList.add('carrousel__img--activer');

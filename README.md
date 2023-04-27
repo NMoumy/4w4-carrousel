@@ -7,7 +7,7 @@
   - https://github.com/NMoumy
 
 # Exercice 2
-## description de l'exercice 2:
+### description de l'exercice 2 :
 #### Ajouter
 - **Les boutons «suivant» et «précédant»** La navigation avec les boutons flèches permet de parcourir en boucle  l'ensemble des images du carrousel.
 - **L'état des radio-boutons** s'adaptent au changement d'images.
