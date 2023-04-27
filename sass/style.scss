@@ -1,10 +1,10 @@
+// LE CARROUSEL
 .carrousel {
   width: 50%;
   height: 50%;
   position: absolute;
   left: 25%;
   top: 25%;
-  background-color: orange;
   border: 3px solid rgb(255, 98, 0);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transform: scale(0);
@@ -19,6 +19,7 @@
 
 }
 
+// LES IMAGES
 .carrousel__figure {
   // overflow: hidden;
   width: 100%;
@@ -34,10 +35,8 @@
   opacity: 0;
   transition: opacity .5s;
 }
-.carrousel__img--activer{
-  opacity: 1;
-}
 
+// BOUTON FERMETURE
 .carrousel__x {
   position: absolute;
   top: 5px;
@@ -45,9 +44,15 @@
   z-index: 3;
 }
 
+// LES ÉTATS
 .carrousel--ouvrir { // "--" car c'est une classe qu'on va ajouter après
   transform: scale(1);
 }
+.carrousel__img--activer{
+  opacity: 1;
+}
+
+// LE FORMULAIRE
 .carrousel__form {
   position: absolute;
   bottom: 0;
@@ -59,6 +64,7 @@
   margin: 5px;
 }
 
+ // LES FLÈCHES
 .carrousel__droite {
   position: absolute;
   background-color: aqua;

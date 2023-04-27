@@ -2,10 +2,14 @@
   console.log('Début du carrousel');
 
   /******************** Variable du carrousel ********************/
-  let btncarrousel__x = document.querySelector('.carrousel__x');
   let carrousel = document.querySelector('.carrousel');
   let carrousel__figure = document.querySelector('.carrousel__figure');
   let carrousel__form = document.querySelector('.carrousel__form');
+
+  /******************** Variable des boutons ********************/
+  let btn__droite = document.querySelector('.carrousel__droite');
+  let btn__gauche =  document.querySelector('.carrousel__gauche');
+  let btncarrousel__x = document.querySelector('.carrousel__x');
 
   /******************** Variable de la galerie ********************/
   let galerie = document.querySelector('.galerie');
@@ -45,6 +49,7 @@
   
       creation_img_carrousel(elm);
       creation_radio_carrousel();
+  
     }
   }
   
@@ -76,10 +81,35 @@
 
     rad.addEventListener('mousedown', function(){
       console.log("index btn toucher : "+this.dataset.index);
-      index = this.dataset.index;
+      index = parseInt(this.dataset.index);
       afficher_image(index);
     })
   }
+
+  /**
+   * gestion_fleches
+   * La gestions des fleches
+   */
+
+    
+    btn__droite.addEventListener('mousedown', function(){
+     
+      index++;
+      console.log("index btn droite : "+ index);
+      if(index== galerie__img.length){
+        index=0;
+      }
+      afficher_image(index);
+    })
+
+    btn__gauche.addEventListener('mousedown', function(){
+      index--;
+      if(index==-1){
+        index= galerie__img.length-1;
+      }
+      console.log("index btn gauche : "+ index);
+      afficher_image(index);
+    })
 
   /**
    * afficher_image
