@@ -54,16 +54,22 @@
 
 .carrousel__droite {
   position: absolute;
-  background-color: aqua;
   right: 0;
   top: 50%;
   z-index: 3;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 2rem;
 }
 
 .carrousel__gauche {
   position: absolute;
   z-index: 3;
-  background-color: aqua;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 2rem;
   left: 0;
   top: 50%;
 }/*# sourceMappingURL=style.css.map */
