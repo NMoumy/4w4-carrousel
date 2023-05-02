@@ -4,7 +4,7 @@
   position: absolute;
   left: 25%;
   top: 25%;
-  border: 3px solid rgb(255, 98, 0);
+  border: 3px solid rgb(0, 0, 0);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transform: scale(0);
   transition: transform 0.5s;
