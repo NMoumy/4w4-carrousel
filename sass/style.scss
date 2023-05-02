@@ -40,6 +40,12 @@
 // BOUTON FERMETURE
 .carrousel__x {
   position: absolute;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid rgb(47, 47, 47);
+  padding: 0.5rem;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
   top: 5px;
   right: 5px;
   z-index: 3;
