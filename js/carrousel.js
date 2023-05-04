@@ -80,7 +80,13 @@
   {
     let img = document.createElement('img');
     // img.setAttribute('src', elm.getAttribute('src'));
-    img.src = elm.src;
+
+    /* retire les 12 dernier caractère «-150x150.jpg» pour avoir une bonne resolution */
+    let longueur = elm.src.length-12;
+    //let extension = elm.src.substr(0,-4);
+    img.src = elm.src.substr(0,longueur)+".jpg";
+
+
     img.classList.add('carrousel__img');
     // console.log(img__src);
     carrousel__figure.appendChild(img);
@@ -125,6 +131,10 @@
     carrousel__figure.children[index].classList.add('carrousel__img--activer');
     ancien_index = index;
     carrousel__form.children[ancien_index].checked = true;
+  }
+
+  function changer_resolution() {
+    
   }
   
 /*
