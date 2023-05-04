@@ -126,15 +126,45 @@
       carrousel__figure.children[ancien_index].classList.remove('carrousel__img--activer');
       carrousel__form.children[ancien_index].checked = false;
     }
-    console.log(ancien_index);
     // carrousel__figure.children[this.dataset.index].style.opacity = 1;
+    redimensionner_carrousel();
     carrousel__figure.children[index].classList.add('carrousel__img--activer');
     ancien_index = index;
     carrousel__form.children[ancien_index].checked = true;
   }
 
-  function changer_resolution() {
-    
+  /**
+   * redimensionner_carrousel
+   * redimensionner les images du carrousel
+   */
+
+  function redimensionner_carrousel() {
+    /* récuperer les dimensions de l'image courante */
+    const imageWidth = carrousel__figure.children[index].naturalWidth;
+    const imageHeight = carrousel__figure.children[index].naturalHeight;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    let carrouselWidth = windowWidth;
+    if(windowWidth > 1000){ // comme media query
+      carrouselWidth = windowWidth - windowWidth/2;
+    }
+
+    let carrouselHeight = carrouselWidth * imageHeight/imageWidth;
+
+    carrousel.style.width = `${carrouselWidth}px`;
+    carrousel.style.height = `${carrouselHeight}px`;
+    carrousel.style.top = `${(windowHeight-carrouselHeight)/2}px`;
+    carrousel.style.left = `${(windowWidth-carrouselWidth)/2}px`;
+
+    console.log(`
+      imageWidth = ${imageWidth}
+      imageHeight = ${imageHeight}
+      windowWidth = ${windowWidth}
+      windowHeight = ${windowHeight}
+      carrouselWidth = ${carrouselWidth}
+      carrouselHeight = ${carrouselHeight}
+    `);
   }
   
 /*
