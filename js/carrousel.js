@@ -146,7 +146,7 @@
     const windowHeight = window.innerHeight;
 
     let carrouselWidth = windowWidth;
-    if(windowWidth > 1000){ // comme media query
+    if(windowWidth > 1000){ // comme media query css
       carrouselWidth = windowWidth - windowWidth/2;
     }
 
